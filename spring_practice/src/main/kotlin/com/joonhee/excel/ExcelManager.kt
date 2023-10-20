@@ -15,7 +15,7 @@ class ExcelManager {
     inline fun <reified T : Any> createExcel(t: List<T>) {
         val os = ByteArrayOutputStream()
         val wb = Workbook(os, "Test", "1.0")
-        val ws = wb!!.newWorksheet("Sheet 1")
+        val ws = wb.newWorksheet("Sheet 1")
 
 
         t.withIndex().map {row->
